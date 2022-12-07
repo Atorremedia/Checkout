@@ -1,0 +1,10 @@
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #D1D5DB;
+  font-family: 'Rubik';
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
