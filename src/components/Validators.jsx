@@ -1,14 +1,33 @@
-const cardValidator = (value) => {
-    const visaRegexValidator = '/^4[0-9]{12}(?:[0-9]{3})?$/';
-    const masterCardRegexValidator = '/^5[1-5][0-9]{14}$|^2(?:2(?:2[1-9]|[3-9][0-9])|[3-6][0-9][0-9]|7(?:[01][0-9]|20))[0-9]{12}$/';
-    const americanExpressRegexValidator = '/^3[47][0-9]{13}$/';
+const cardValidator = (cardNumber) => {
 
-    const anyCardValidator = (value, validator1, validator2, validator3) => {
-
-        return (value.match(validator1) || value.match(validator2) || value.match(validator3))
-    }
-
-    return (anyCardValidator(value, visaRegexValidator, masterCardRegexValidator, americanExpressRegexValidator ))
+    const trimmedCardNumber = cardNumber.trim().split(' ').join('');
+    console.log(trimmedCardNumber);
+    const allCardsValidator = /^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/;
+    const correct = allCardsValidator.test(trimmedCardNumber);
+    
+    return (correct);
 }
-
 export { cardValidator }
+
+
+const fullNameValidator = (name) => {
+
+    const fullNameValidator = /([a-z]{2,}\s)[a-z]{2,}/;
+    const correct = fullNameValidator.test(name);
+
+    return (correct);
+}
+export { fullNameValidator }
+
+const dateValidator = (cardDate) => {
+
+    const dateValidator = /[0-9]{2}\/[0-9]{2}/;
+    const correctFormat = dateValidator.test(cardDate);
+    const cardMonth = cardDate.split('/')[0];
+    const cardYear = cardDate.split('/')[1];
+
+
+
+    return (correctFormat && cardMonth >=1 && cardMonth<=12 && cardYear>=22 && cardYear<=99);
+}
+export { dateValidator }
