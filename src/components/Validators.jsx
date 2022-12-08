@@ -26,8 +26,10 @@ const dateValidator = (cardDate) => {
     const cardMonth = cardDate.split('/')[0];
     const cardYear = cardDate.split('/')[1];
 
+    if (!correctFormat) { return false }
+    if (cardMonth < 1 || cardMonth > 12) { return false }
+    if (cardYear < 22 || cardYear > 99) { return false }
 
-
-    return (correctFormat && cardMonth >=1 && cardMonth<=12 && cardYear>=22 && cardYear<=99);
+    return ( true );
 }
 export { dateValidator }

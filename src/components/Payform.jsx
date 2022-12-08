@@ -32,13 +32,13 @@ const [showConfirmation, setshowConfirmation] = useState(false);
     
 
   return (
-    <div className='container flex justify-center bg-gray-300'>
+    <div className='container flex justify-center bg-gray-300 m-auto'>
         <form className='payform m-4 p-[32px] w-[319px] h-[640px] bg-white rounded-[8px]' onSubmit={handleSubmit(onSubmit)}>
             <img src="../../logo1.webp" alt="Logo" width="71" height="71" className='mx-auto my-0' />
             <h1 className="title text-2xl mt-1 mb-3 text-[20px] font-sans font-extrabold text-center leading-6">Payment info</h1>
             <div className={`${inputContainerStyle} mt-[24px]`}>
                 <label htmlFor="name" className={`${labelStyle}`}>Full Name</label>
-                <input type="text" id="name" className={inputStyle} autoComplete="off" spellCheck="false" placeholder='Your Name' {...register('fullName', {
+                <input type="text" id="name" className={inputStyle} title="Insert your full name" autoComplete="off" spellCheck="false" placeholder='Your Name' {...register('fullName', {
                     required: true,
                     minLength:5,
                     maxLength: 35,
@@ -48,7 +48,7 @@ const [showConfirmation, setshowConfirmation] = useState(false);
             </div>
             <div className={`${inputContainerStyle} relative`}>
                 <label htmlFor="name" className={`${labelStyle}`}>Card Number</label>
-                <input type="text" id="name" className={`${inputStyle}`} autoComplete="off" spellCheck="false" placeholder='1234 1234 1234 1234'  {...register('cardNumber', {
+                <input type="text" id="name" className={`${inputStyle}`} title="Insert your card number" autoComplete="off" spellCheck="false" placeholder='1234 1234 1234 1234'  {...register('cardNumber', {
                     required: true,
                     validate: cardValidator
                 })}/>
@@ -58,7 +58,7 @@ const [showConfirmation, setshowConfirmation] = useState(false);
             <div className="card-data-container flex flex-row justify-between">
                 <div className={`${inputContainerStyle} w-[45%] mx-0`}>
                     <label htmlFor="name" className={labelStyle}>Expiration</label>
-                    <input type="text" id="name" className={inputStyle} autoComplete="off" spellCheck="false" placeholder='MM/YY' {...register('expiration', {
+                    <input type="text" id="name" className={inputStyle} title="Insert your card's expiration date" autoComplete="off" spellCheck="false" placeholder='MM/YY' {...register('expiration', {
                         required: true,
                         validate: dateValidator
                     })}/>
@@ -66,7 +66,7 @@ const [showConfirmation, setshowConfirmation] = useState(false);
                 </div>
                 <div className={`${inputContainerStyle} w-5/12 mx-0 relative`}>
                     <label htmlFor="name" className={labelStyle}>CVV</label>
-                    <input type="text" id="name" className={`{${inputStyle} mr-0 w-full`} autoComplete="off" spellCheck="false"  placeholder='···' {...register('cvv', {
+                    <input type="text" id="name" className={`{${inputStyle} mr-0 w-full`} title="Insert your card's CVV" autoComplete="off" spellCheck="false"  placeholder='···' {...register('cvv', {
                         required: true,
                         minLength:3,
                         maxLength: 4
@@ -77,7 +77,7 @@ const [showConfirmation, setshowConfirmation] = useState(false);
             </div>
             <div className={inputContainerStyle}>
                 <label htmlFor="name" className={labelStyle}>Zip Code</label>
-                <input type="text" id="name" className={inputStyle} autoComplete="off" spellCheck="false" placeholder='Your ZIP' {...register('zipCode', {
+                <input type="text" id="name" className={inputStyle} title="Insert your ZIP code" autoComplete="off" spellCheck="false" placeholder='Your ZIP' {...register('zipCode', {
                         required: true,
                         minLength:5,
                         maxLength: 6
