@@ -2,6 +2,8 @@
 
 Simple check out page. It includes client-side validation. Several credit cards are supported (*Visa, Master Card, American Express, Diners Club, Discovery, JCB*). Build with **React**, **Vite** and **Tailwind**.
 
+You can check it at [http://checkout.augustolle.com](http://checkout.augustolle.com)
+
 ## Background 
 
 This project is made in order to participate in the **Nuwe Talent Squad Frontend III** coding challenge. It is also an oportunity to practice developing functional web components from a given design.
