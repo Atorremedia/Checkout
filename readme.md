@@ -36,7 +36,8 @@ npm start
 ## Stack
 
 #### ReactJS
-This Javascript library was used in order to make a component-based project, so it is modularized and scalable. Modularization helps specially in code maintenance, wich is key to any coding project.
+This Javascript library was used in order to make a component-based project, so it is modularized and scalable. Modularization helps specially in code maintenance, which is key to any coding project.
+Validations are also modularized so they can be edited or more validations can be added to the form.
 
 #### Vite
 Vite was used to set the React project and boundle it. The use of Vite has been spreading lately due to its efficiency and ease of use.
