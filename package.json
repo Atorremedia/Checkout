@@ -2,7 +2,7 @@
   "name": "frontend3",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://atorremedia.github.io/Checkout",
+  "homepage": "https://atorremedia.github.io/checkout",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
