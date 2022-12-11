@@ -44,7 +44,7 @@ const [showConfirmation, setshowConfirmation] = useState(false);
                     maxLength: 35,
                     validate: fullNameValidator
                 })}/>
-                {errors.fullName && <div className={validationStyle}>Enter a valid name</div>}
+                {errors.fullName && <div className={validationStyle}>Enter a valid name and surname</div>}
             </div>
             <div className={`${inputContainerStyle} relative`}>
                 <label htmlFor="name" className={`${labelStyle}`}>Card Number</label>
