@@ -35,23 +35,23 @@ npm start
 
 ## Stack
 
-###ReactJS
+#### ReactJS
 This Javascript library was used in order to make a component-based project, so it is modularized and scalable. Modularization helps specially in code maintenance, wich is key to any coding project.
 
-####Vite
+#### Vite
 Vite was used to set the React project and boundle it. The use of Vite has been spreading lately due to its efficiency and ease of use.
 
-####React Forms Hook
+#### React Forms Hook
 This React Library is used as a systematic way to handle this form. It allows to implement even more control on the form if it is needed at any time.
 
-####Tailwind
+#### Tailwind
 For a simple design as the proposed for this exercise, in combination with React, Tailwind offered a simple way to set styles. Variables are used to help keeping the code clean and easy to mantain:
 
 ```shell
-    const inputContainerStyle = 'input-container relative flex flex-col justify-items-center items-start mt-5 '
+    const inputContainerStyle = 'input-container relative flex flex-col justify-items-center items-start mt-5';
     const labelStyle = 'label mt-[9px] text-sm leading-[14px] font-medium';
     const inputStyle = 'input w-full h-10 text-lg mt-[8px] p-3 border border-solid border-[1.5px] border-[#A7BAC5] placeholder-[#A7BAC5] placeholder-font-300 rounded-lg';
-    const validationStyle = 'validation-msg absolute top-[72px] text-xs font-semibold ml-2 text-red-400'
+    const validationStyle = 'validation-msg absolute top-[72px] text-xs font-semibold ml-2 text-red-400';
 ```
 
 ```shell
